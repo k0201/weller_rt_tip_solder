@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:WELLER-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -18,19 +19,6 @@ Wire Wire Line
 Connection ~ 4500 1600
 Wire Wire Line
 	4500 1600 4600 1600
-$Comp
-L Device:R R16
-U 1 1 5CB4E905
-P 4800 1800
-F 0 "R16" H 4870 1846 50  0000 L CNN
-F 1 "10R" H 4870 1755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1800 50  0001 C CNN
-F 3 "~" H 4800 1800 50  0001 C CNN
-	1    4800 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 1650 4800 1450
 Text HLabel 2400 2250 1    50   Input ~ 0
 3_3_stm
 Text Label 4800 2000 0    50   ~ 0
@@ -168,7 +156,7 @@ U 1 1 5CB55440
 P 2500 2800
 F 0 "R14" H 2570 2846 50  0000 L CNN
 F 1 "n.c." H 2570 2755 50  0000 L CNN
-F 2 "" V 2430 2800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2430 2800 50  0001 C CNN
 F 3 "~" H 2500 2800 50  0001 C CNN
 	1    2500 2800
 	1    0    0    -1  
@@ -261,30 +249,17 @@ F 3 "~" H 2250 4800 50  0001 C CNN
 	1    2250 4800
 	-1   0    0    1   
 $EndComp
-Text Notes 5850 3450 0    50   ~ 0
-STM32F030C8Tx pasuje wystrczy zrobć nc na 36 i 35 \nfootprint się zgadza tylko \npin 36 to VDD\npin35 to GND\n\n
-$Comp
-L MCU_ST_STM32F1:STM32F103C8Tx U4
-U 1 1 5CB8F31E
-P 4600 4100
-F 0 "U4" H 4550 2511 50  0000 C CNN
-F 1 "STM32F103C8Tx" H 4550 2420 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 4000 2700 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4600 4100 50  0001 C CNN
-	1    4600 4100
-	1    0    0    -1  
-$EndComp
 Text Notes 5700 2000 0    50   ~ 0
 można by dodać eeprom do zapisaywania danych dot temp ?\n->powinno się zmieścić we falshu\n
 Text HLabel 3750 3500 0    50   BiDi ~ 0
 sw1
 Text HLabel 3750 3600 0    50   BiDi ~ 0
 sw2
-Text HLabel 3650 3900 0    50   Output ~ 0
+Text HLabel 3650 4200 0    50   Output ~ 0
 led_g
-Text HLabel 3650 4000 0    50   Output ~ 0
+Text HLabel 3650 4300 0    50   Output ~ 0
 led_r
-Text HLabel 3650 4100 0    50   Output ~ 0
+Text HLabel 3650 4400 0    50   Output ~ 0
 led_y
 Text HLabel 3550 3200 0    50   BiDi ~ 0
 weller_con1
@@ -312,7 +287,7 @@ F 3 "~" H 3950 2250 50  0001 C CNN
 $EndComp
 Connection ~ 4700 2250
 Wire Wire Line
-	4700 2250 4700 1600
+	4700 2250 4700 1700
 $Comp
 L power:GND #PWR0131
 U 1 1 5CC32185
@@ -347,11 +322,11 @@ Wire Wire Line
 Wire Wire Line
 	3750 3500 3900 3500
 Wire Wire Line
-	3900 3900 3650 3900
+	3900 4200 3650 4200
 Wire Wire Line
-	3650 4000 3900 4000
+	3650 4300 3900 4300
 Wire Wire Line
-	3650 4100 3900 4100
+	3650 4400 3900 4400
 Wire Wire Line
 	2250 2800 3900 2800
 Wire Wire Line
@@ -397,11 +372,7 @@ Text Label 2800 4900 0    50   ~ 0
 SWCLK
 Connection ~ 4800 2350
 Wire Wire Line
-	4800 2350 4800 2600
-Wire Wire Line
-	4800 1950 4800 2350
-Text Label 4800 1450 0    50   ~ 0
-3_3v
+	4800 2350 4800 2500
 Text Label 2800 5200 0    50   ~ 0
 3_3v
 Wire Wire Line
@@ -458,95 +429,136 @@ F 3 "" H 2600 4400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2600 4400 2450 4400
-$Comp
-L MCU_ST_STM32F0:STM32F031K6Ux U5
-U 1 1 5CC8D80A
-P 7200 4700
-F 0 "U5" H 7150 3611 50  0000 C CNN
-F 1 "STM32F031K6Ux" H 7150 3520 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm" H 6700 3800 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00104043.pdf" H 7200 4700 50  0001 C CNN
-	1    7200 4700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4600 2050 4600 2600
-Wire Wire Line
-	7700 5300 8050 5300
-Wire Wire Line
-	7700 5400 8050 5400
-Text Label 8050 5300 0    50   ~ 0
-SWDIO
-Text Label 8050 5400 0    50   ~ 0
-SWCLK
-Text HLabel 8050 4800 2    50   Output ~ 0
-PWM_heater
-Text HLabel 8050 4000 2    50   Input ~ 0
-termocouple
-Wire Wire Line
-	8050 4000 7700 4000
-Wire Wire Line
-	8050 4800 7700 4800
-Text HLabel 6350 4700 0    50   Output ~ 0
-led_g
-Text HLabel 6350 4800 0    50   Output ~ 0
-led_r
-Text HLabel 6350 4900 0    50   Output ~ 0
-led_y
-Wire Wire Line
-	6600 4700 6350 4700
-Wire Wire Line
-	6350 4800 6600 4800
-Wire Wire Line
-	6350 4900 6600 4900
-Text HLabel 6450 4400 0    50   BiDi ~ 0
-sw1
-Text HLabel 6450 4500 0    50   BiDi ~ 0
-sw2
-Wire Wire Line
-	6600 4500 6450 4500
-Wire Wire Line
-	6450 4400 6600 4400
-Text HLabel 6250 5500 0    50   BiDi ~ 0
-weller_con1
-Wire Wire Line
-	6600 5500 6250 5500
+Text Label 3550 3000 0    50   ~ 0
+BOOT
 $Comp
-L power:GND #PWR0136
-U 1 1 5CCC5FD8
-P 7200 5950
-F 0 "#PWR0136" H 7200 5700 50  0001 C CNN
-F 1 "GND" H 7205 5777 50  0000 C CNN
-F 2 "" H 7200 5950 50  0001 C CNN
-F 3 "" H 7200 5950 50  0001 C CNN
-	1    7200 5950
+L Connector:Conn_01x04_Female J4
+U 1 1 5CEC6946
+P 8400 3400
+F 0 "J4" H 8428 3376 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 8428 3285 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8400 3400 50  0001 C CNN
+F 3 "~" H 8400 3400 50  0001 C CNN
+	1    8400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0139
+U 1 1 5CEC799A
+P 8100 3600
+F 0 "#PWR0139" H 8100 3350 50  0001 C CNN
+F 1 "GND" H 8105 3427 50  0000 C CNN
+F 2 "" H 8100 3600 50  0001 C CNN
+F 3 "" H 8100 3600 50  0001 C CNN
+	1    8100 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 5950 7200 5700
-Text HLabel 7200 3500 1    50   Input ~ 0
+	8200 3600 8100 3600
+Text HLabel 8050 3500 0    50   Input ~ 0
 3_3_stm
 Wire Wire Line
-	7200 3500 7200 3600
+	8050 3500 8200 3500
 Wire Wire Line
-	7100 3800 7100 3600
+	8200 3400 8050 3400
 Wire Wire Line
-	7100 3600 7200 3600
-Connection ~ 7200 3600
+	8200 3300 8050 3300
+Text Label 8050 3300 0    50   ~ 0
+sda
+Text Label 8050 3400 0    50   ~ 0
+scl
+Text Label 3650 4600 0    50   ~ 0
+sda
 Wire Wire Line
-	7200 3600 7200 3800
-Text Label 7300 3650 0    50   ~ 0
-3_3v_analog
+	3650 4600 3900 4600
+Text Label 3650 4500 0    50   ~ 0
+scl
 Wire Wire Line
-	7300 3800 7300 3650
-Text Label 6350 4000 2    50   ~ 0
-nRST
+	3650 4500 3900 4500
+NoConn ~ 5200 4000
+NoConn ~ 5200 4100
+NoConn ~ 5200 4200
+NoConn ~ 5200 4300
+NoConn ~ 5200 4400
+NoConn ~ 5200 4500
+NoConn ~ 5200 4600
+NoConn ~ 5200 4800
+NoConn ~ 5200 4900
+NoConn ~ 5200 5000
+NoConn ~ 5200 5100
+NoConn ~ 3900 3700
+NoConn ~ 3900 3300
+NoConn ~ 3900 4700
+NoConn ~ 3900 4800
+NoConn ~ 3900 4900
+NoConn ~ 3900 5000
+NoConn ~ 3900 5100
+NoConn ~ 3900 5200
+NoConn ~ 3900 5300
+NoConn ~ 3900 5400
+NoConn ~ 2450 4500
+NoConn ~ 2450 4700
+NoConn ~ 2250 4100
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5CF20655
+P 4800 2500
+F 0 "#FLG0101" H 4800 2575 50  0001 C CNN
+F 1 "PWR_FLAG" V 4800 2628 50  0000 L CNN
+F 2 "" H 4800 2500 50  0001 C CNN
+F 3 "~" H 4800 2500 50  0001 C CNN
+	1    4800 2500
+	0    1    1    0   
+$EndComp
+Connection ~ 4800 2500
 Wire Wire Line
-	6600 4000 6350 4000
-Text Label 3550 3000 0    50   ~ 0
-BOOT
-Text Label 6300 4200 2    50   ~ 0
-BOOT
+	4800 2500 4800 2600
+NoConn ~ 3900 4100
+NoConn ~ 3900 4000
+NoConn ~ 3900 3900
+$Comp
+L MCU_ST_STM32F1:STM32F103C8Tx U4
+U 1 1 5CB8F31E
+P 4600 4100
+F 0 "U4" H 4550 2511 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 4550 2420 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 4000 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5200 5400
 Wire Wire Line
-	6300 4200 6600 4200
+	4800 1450 4800 2350
+$Comp
+L Device:C C20
+U 1 1 5CEC80E5
+P 5600 1700
+F 0 "C20" V 5348 1700 50  0000 C CNN
+F 1 "100n" V 5439 1700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5638 1550 50  0001 C CNN
+F 3 "~" H 5600 1700 50  0001 C CNN
+	1    5600 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5CEC80EB
+P 5850 1700
+F 0 "#PWR01" H 5850 1450 50  0001 C CNN
+F 1 "GND" V 5855 1572 50  0000 R CNN
+F 2 "" H 5850 1700 50  0001 C CNN
+F 3 "" H 5850 1700 50  0001 C CNN
+	1    5850 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5850 1700 5750 1700
+Wire Wire Line
+	5450 1700 4700 1700
+Connection ~ 4700 1700
+Wire Wire Line
+	4700 1700 4700 1600
 $EndSCHEMATC

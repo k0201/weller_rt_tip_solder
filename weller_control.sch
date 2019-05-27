@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:WELLER-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -78,7 +79,7 @@ U 1 1 5CBB027F
 P 4000 3050
 F 0 "R7" V 3793 3050 50  0000 C CNN
 F 1 "100" V 3884 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 3930 3050 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3930 3050 50  0001 C CNN
 F 3 "~" H 4000 3050 50  0001 C CNN
 	1    4000 3050
 	0    1    1    0   
@@ -222,7 +223,7 @@ Wire Wire Line
 	6100 5700 6100 6000
 Connection ~ 5750 6000
 Wire Wire Line
-	5750 6000 5750 6250
+	5750 6000 5750 6150
 Wire Wire Line
 	5750 5700 5750 6000
 Wire Wire Line
@@ -240,7 +241,6 @@ F 3 "https://www.tme.eu/Document/718e1e465ad4ed1ffbd9a510b0eda58e/mcp6031.pdf" H
 	1    5850 5300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5750 5000
 Text Notes 7200 4700 0    50   ~ 0
 sprawdzenie czy na przypisanie pinów na footptincie piny się zgadza\n
 Text Label 4000 5200 2    50   ~ 0
@@ -355,7 +355,7 @@ U 1 1 5CBF4CC1
 P 6550 5450
 F 0 "C11" H 6665 5496 50  0000 L CNN
 F 1 "n.c." H 6665 5405 50  0000 L CNN
-F 2 "" H 6588 5300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6588 5300 50  0001 C CNN
 F 3 "~" H 6550 5450 50  0001 C CNN
 	1    6550 5450
 	1    0    0    -1  
@@ -485,4 +485,23 @@ Wire Wire Line
 	5900 2600 6000 2600
 Wire Wire Line
 	6600 2600 6650 2600
+Text HLabel 5750 4950 1    50   Input ~ 0
+3.3V_analog
+Wire Wire Line
+	5750 4950 5750 5000
+NoConn ~ 7150 3600
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5CF26DBB
+P 5750 6150
+F 0 "#FLG0104" H 5750 6225 50  0001 C CNN
+F 1 "PWR_FLAG" V 5750 6278 50  0000 L CNN
+F 2 "" H 5750 6150 50  0001 C CNN
+F 3 "~" H 5750 6150 50  0001 C CNN
+	1    5750 6150
+	0    1    1    0   
+$EndComp
+Connection ~ 5750 6150
+Wire Wire Line
+	5750 6150 5750 6250
 $EndSCHEMATC
