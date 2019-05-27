@@ -462,7 +462,7 @@ Text HLabel 8050 3500 0    50   Input ~ 0
 Wire Wire Line
 	8050 3500 8200 3500
 Wire Wire Line
-	8200 3400 8050 3400
+	8200 3400 8100 3400
 Wire Wire Line
 	8200 3300 8050 3300
 Text Label 8050 3300 0    50   ~ 0
@@ -561,4 +561,39 @@ Wire Wire Line
 Connection ~ 4700 1700
 Wire Wire Line
 	4700 1700 4700 1600
+$Comp
+L Device:R R?
+U 1 1 5CEC68D2
+P 8200 3150
+F 0 "R?" H 8270 3196 50  0000 L CNN
+F 1 "10k" H 8270 3105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8130 3150 50  0001 C CNN
+F 3 "~" H 8200 3150 50  0001 C CNN
+	1    8200 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8200 3300
+$Comp
+L Device:R R?
+U 1 1 5CEC6FCF
+P 8100 3250
+F 0 "R?" H 8170 3296 50  0000 L CNN
+F 1 "10k" H 8170 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8030 3250 50  0001 C CNN
+F 3 "~" H 8100 3250 50  0001 C CNN
+	1    8100 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 3400
+Wire Wire Line
+	8100 3400 8050 3400
+Text HLabel 8050 3000 0    50   Input ~ 0
+3_3_stm
+Wire Wire Line
+	8050 3000 8100 3000
+Wire Wire Line
+	8100 3000 8100 3100
+Wire Wire Line
+	8100 3000 8200 3000
+Connection ~ 8100 3000
 $EndSCHEMATC
