@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:WELLER-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,7 +20,7 @@ U 1 1 5CB5C252
 P 1000 2750
 F 0 "J1" H 1057 3075 50  0000 C CNN
 F 1 "Jack-DC" H 1057 2984 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 1050 2710 50  0001 C CNN
+F 2 "symbols:jackDC_cutout" H 1050 2710 50  0001 C CNN
 F 3 "~" H 1050 2710 50  0001 C CNN
 	1    1000 2750
 	1    0    0    -1  
@@ -291,50 +291,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 2550 2200 2650
 Connection ~ 2200 2650
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 5CC1244A
-P 2950 1200
-F 0 "H1" H 3050 1246 50  0000 L CNN
-F 1 "MountingHole" H 3050 1155 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2950 1200 50  0001 C CNN
-F 3 "~" H 2950 1200 50  0001 C CNN
-	1    2950 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5CC12623
-P 2950 1400
-F 0 "H2" H 3050 1446 50  0000 L CNN
-F 1 "MountingHole" H 3050 1355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2950 1400 50  0001 C CNN
-F 3 "~" H 2950 1400 50  0001 C CNN
-	1    2950 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5CC127F9
-P 2950 1600
-F 0 "H3" H 3050 1646 50  0000 L CNN
-F 1 "MountingHole" H 3050 1555 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2950 1600 50  0001 C CNN
-F 3 "~" H 2950 1600 50  0001 C CNN
-	1    2950 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5CC129B7
-P 2950 1800
-F 0 "H4" H 3050 1846 50  0000 L CNN
-F 1 "MountingHole" H 3050 1755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2" H 2950 1800 50  0001 C CNN
-F 3 "~" H 2950 1800 50  0001 C CNN
-	1    2950 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1550 2450 1550 2350
 Wire Wire Line

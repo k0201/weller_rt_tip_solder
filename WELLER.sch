@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:WELLER-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +47,7 @@ $EndSheet
 Wire Wire Line
 	6300 4600 2600 4600
 Wire Wire Line
-	2600 4600 2600 2950
+	2600 4600 2600 3100
 Wire Wire Line
 	2100 2950 2600 2950
 Wire Wire Line
@@ -113,9 +113,15 @@ F7 "led_y" O R 5500 2650 50
 F8 "PWM_heater" O R 5500 3450 50 
 F9 "termocouple" I R 5500 3550 50 
 F10 "weller_con1" B R 5500 3200 50 
+F11 "12V" I L 3750 3100 50 
 $EndSheet
 Wire Wire Line
 	6650 3450 5500 3450
 Wire Wire Line
 	5500 3550 6650 3550
+Wire Wire Line
+	2600 3100 3750 3100
+Connection ~ 2600 3100
+Wire Wire Line
+	2600 3100 2600 2950
 $EndSCHEMATC

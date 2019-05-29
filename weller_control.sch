@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:WELLER-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -14,21 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR?
-U 1 1 5CBA0B9E
-P 7350 3950
-AR Path="/5CB5C0EA/5CBA0B9E" Ref="#PWR?"  Part="1" 
-AR Path="/5CB9B8FA/5CBA0B9E" Ref="#PWR0115"  Part="1" 
-F 0 "#PWR0115" H 7350 3700 50  0001 C CNN
-F 1 "GND" H 7355 3777 50  0000 C CNN
-F 2 "" H 7350 3950 50  0001 C CNN
-F 3 "" H 7350 3950 50  0001 C CNN
-	1    7350 3950
-	1    0    0    -1  
-$EndComp
-Text Label 7050 3600 2    50   ~ 0
-heater
 Text HLabel 6300 2550 1    50   Input ~ 0
 12V
 Wire Wire Line
@@ -71,7 +56,7 @@ U 1 1 5CBB027F
 P 4000 3050
 F 0 "R7" V 3793 3050 50  0000 C CNN
 F 1 "100" V 3884 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3930 3050 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3930 3050 50  0001 C CNN
 F 3 "~" H 4000 3050 50  0001 C CNN
 	1    4000 3050
 	0    1    1    0   
@@ -117,22 +102,8 @@ Wire Wire Line
 Wire Wire Line
 	5200 2850 5100 2850
 Connection ~ 5100 2850
-Connection ~ 6300 3500
-Wire Wire Line
-	6300 3500 7150 3500
 Text HLabel 3550 3050 0    50   Input ~ 0
 HeaterDrivePWM
-$Comp
-L Transistor_FET:DMP3013SFV Q1
-U 1 1 5CBB49B6
-P 6200 3050
-F 0 "Q1" H 6406 3096 50  0000 L CNN
-F 1 "DMP2018LFK" H 6406 3005 50  0000 L CNN
-F 2 "Package_SON:Diodes_PowerDI3333-8" H 6400 2975 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 6200 3050 50  0001 L CNN
-	1    6200 3050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5100 3050 6000 3050
 Wire Wire Line
@@ -215,8 +186,6 @@ Wire Wire Line
 	6100 5700 6100 6000
 Connection ~ 5750 6000
 Wire Wire Line
-	5750 6000 5750 6150
-Wire Wire Line
 	5750 5700 5750 6000
 Wire Wire Line
 	5800 5700 5750 5700
@@ -233,7 +202,7 @@ F 3 "https://www.tme.eu/Document/718e1e465ad4ed1ffbd9a510b0eda58e/mcp6031.pdf" H
 	1    5850 5300
 	1    0    0    -1  
 $EndComp
-Text Notes 7250 3150 0    50   ~ 0
+Text Notes 7100 2800 0    50   ~ 0
 sprawdzenie czy na przypisanie pinów na footptincie piny się zgadza\n
 Text Label 4000 5200 2    50   ~ 0
 termocouple+
@@ -378,7 +347,7 @@ Wire Wire Line
 	6550 5950 6550 5600
 Wire Wire Line
 	7250 5300 7050 5300
-Text HLabel 7000 3700 0    50   BiDi ~ 0
+Text HLabel 7450 3400 0    50   BiDi ~ 0
 weller_connected_pin
 Wire Wire Line
 	5300 3850 5300 3800
@@ -468,39 +437,63 @@ Text HLabel 5750 4950 1    50   Input ~ 0
 3.3V_analog
 Wire Wire Line
 	5750 4950 5750 5000
-$Comp
-L power:PWR_FLAG #FLG0104
-U 1 1 5CF26DBB
-P 5750 6150
-F 0 "#FLG0104" H 5750 6225 50  0001 C CNN
-F 1 "PWR_FLAG" V 5750 6278 50  0000 L CNN
-F 2 "" H 5750 6150 50  0001 C CNN
-F 3 "~" H 5750 6150 50  0001 C CNN
-	1    5750 6150
-	0    1    1    0   
-$EndComp
-Connection ~ 5750 6150
+Text Label 7550 3200 2    50   ~ 0
+termocouple+
 Wire Wire Line
-	5750 6150 5750 6250
+	7600 3400 7450 3400
+Text Notes 7100 2950 0    50   ~ 0
+from tip: ground, sensor, heater
 $Comp
-L Connector:AudioJack2_Ground_SwitchT J2
-U 1 1 5CEFB0EB
-P 7350 3600
-F 0 "J2" H 7170 3570 50  0000 R CNN
-F 1 "AudioJack2_Ground_SwitchT" H 7170 3479 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3524-SMT_Horizontal" H 7350 3600 50  0001 C CNN
-F 3 "~" H 7350 3600 50  0001 C CNN
-	1    7350 3600
+L Transistor_FET:DMP3013SFV Q1
+U 1 1 5CBB49B6
+P 6200 3050
+F 0 "Q1" H 6406 3096 50  0000 L CNN
+F 1 "DMP2018LFK" H 6406 3005 50  0000 L CNN
+F 2 "Package_SON:Diodes_PowerDI3333-8" H 6400 2975 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 6200 3050 50  0001 L CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CBA0B9E
+P 7800 3850
+AR Path="/5CB5C0EA/5CBA0B9E" Ref="#PWR?"  Part="1" 
+AR Path="/5CB9B8FA/5CBA0B9E" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 7800 3600 50  0001 C CNN
+F 1 "GND" H 7805 3677 50  0000 C CNN
+F 2 "" H 7800 3850 50  0001 C CNN
+F 3 "" H 7800 3850 50  0001 C CNN
+	1    7800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3800 7800 3850
+$Comp
+L Connector:AudioJack3_Ground_SwitchR J2
+U 1 1 5CFC3271
+P 7800 3300
+F 0 "J2" H 7520 3168 50  0000 R CNN
+F 1 "AudioJack3_Ground_SwitchR" H 7520 3077 50  0000 R CNN
+F 2 "symbols:Jack Audio 1503 20" H 7800 3300 50  0001 C CNN
+F 3 "~" H 7800 3300 50  0001 C CNN
+	1    7800 3300
 	-1   0    0    -1  
 $EndComp
 Text Label 7100 3500 2    50   ~ 0
-termocouple+
+heater
 Wire Wire Line
-	7350 3900 7350 3950
+	7550 3200 7600 3200
 Wire Wire Line
-	7150 3700 7000 3700
+	6300 3500 7200 3500
+Connection ~ 6300 3500
 Wire Wire Line
-	7050 3600 7150 3600
-Text Notes 7250 3300 0    50   ~ 0
-from tip: ground, sensor, heater
+	7600 3300 7200 3300
+Wire Wire Line
+	7200 3300 7200 3500
+Connection ~ 7200 3500
+Wire Wire Line
+	7200 3500 7600 3500
+Wire Wire Line
+	5750 6000 5750 6250
 $EndSCHEMATC
