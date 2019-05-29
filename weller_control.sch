@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:WELLER-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -17,25 +17,17 @@ $EndDescr
 $Comp
 L power:GND #PWR?
 U 1 1 5CBA0B9E
-P 7050 3950
+P 7350 3950
 AR Path="/5CB5C0EA/5CBA0B9E" Ref="#PWR?"  Part="1" 
 AR Path="/5CB9B8FA/5CBA0B9E" Ref="#PWR0115"  Part="1" 
-F 0 "#PWR0115" H 7050 3700 50  0001 C CNN
-F 1 "GND" H 7055 3777 50  0000 C CNN
-F 2 "" H 7050 3950 50  0001 C CNN
-F 3 "" H 7050 3950 50  0001 C CNN
-	1    7050 3950
+F 0 "#PWR0115" H 7350 3700 50  0001 C CNN
+F 1 "GND" H 7355 3777 50  0000 C CNN
+F 2 "" H 7350 3950 50  0001 C CNN
+F 3 "" H 7350 3950 50  0001 C CNN
+	1    7350 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7150 3800 7050 3800
-Wire Wire Line
-	7050 3800 7050 3950
-Wire Wire Line
-	7150 3700 7000 3700
-Text Label 7000 3700 2    50   ~ 0
-termocouple+
-Text Label 7050 3500 2    50   ~ 0
+Text Label 7050 3600 2    50   ~ 0
 heater
 Text HLabel 6300 2550 1    50   Input ~ 0
 12V
@@ -236,12 +228,12 @@ U 1 1 5CBBBF93
 P 5850 5300
 F 0 "U3" H 6194 5346 50  0000 L CNN
 F 1 "MCP603-xCH" H 6194 5255 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 5850 5300 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 5850 5300 50  0001 L CNN
 F 3 "https://www.tme.eu/Document/718e1e465ad4ed1ffbd9a510b0eda58e/mcp6031.pdf" H 5900 5500 50  0001 C CNN
 	1    5850 5300
 	1    0    0    -1  
 $EndComp
-Text Notes 7200 4700 0    50   ~ 0
+Text Notes 7250 3150 0    50   ~ 0
 sprawdzenie czy na przypisanie pinów na footptincie piny się zgadza\n
 Text Label 4000 5200 2    50   ~ 0
 termocouple+
@@ -386,9 +378,7 @@ Wire Wire Line
 	6550 5950 6550 5600
 Wire Wire Line
 	7250 5300 7050 5300
-Wire Wire Line
-	6900 3400 7150 3400
-Text HLabel 6900 3400 1    50   BiDi ~ 0
+Text HLabel 7000 3700 0    50   BiDi ~ 0
 weller_connected_pin
 Wire Wire Line
 	5300 3850 5300 3800
@@ -419,17 +409,6 @@ $EndComp
 Connection ~ 5300 3500
 Wire Wire Line
 	5300 3500 6300 3500
-$Comp
-L Connector:AudioJack3_SwitchTR J2
-U 1 1 5CBFD79A
-P 7350 3700
-F 0 "J2" H 7070 3476 50  0000 R CNN
-F 1 "AudioJack3_Ground_SwitchTR" H 7070 3567 50  0000 R CNN
-F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3524-SMT_Horizontal" H 7350 3700 50  0001 C CNN
-F 3 "~" H 7350 3700 50  0001 C CNN
-	1    7350 3700
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:C C19
 U 1 1 5CCE0742
@@ -489,7 +468,6 @@ Text HLabel 5750 4950 1    50   Input ~ 0
 3.3V_analog
 Wire Wire Line
 	5750 4950 5750 5000
-NoConn ~ 7150 3600
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 5CF26DBB
@@ -504,4 +482,25 @@ $EndComp
 Connection ~ 5750 6150
 Wire Wire Line
 	5750 6150 5750 6250
+$Comp
+L Connector:AudioJack2_Ground_SwitchT J2
+U 1 1 5CEFB0EB
+P 7350 3600
+F 0 "J2" H 7170 3570 50  0000 R CNN
+F 1 "AudioJack2_Ground_SwitchT" H 7170 3479 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3524-SMT_Horizontal" H 7350 3600 50  0001 C CNN
+F 3 "~" H 7350 3600 50  0001 C CNN
+	1    7350 3600
+	-1   0    0    -1  
+$EndComp
+Text Label 7100 3500 2    50   ~ 0
+termocouple+
+Wire Wire Line
+	7350 3900 7350 3950
+Wire Wire Line
+	7150 3700 7000 3700
+Wire Wire Line
+	7050 3600 7150 3600
+Text Notes 7250 3300 0    50   ~ 0
+from tip: ground, sensor, heater
 $EndSCHEMATC
