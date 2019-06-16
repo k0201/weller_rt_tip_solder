@@ -409,7 +409,6 @@ Text Label 5750 4100 0    50   ~ 0
 scl
 Wire Wire Line
 	5750 4100 6000 4100
-NoConn ~ 7300 3900
 NoConn ~ 7300 4000
 NoConn ~ 7300 4100
 NoConn ~ 7300 4200
@@ -675,7 +674,10 @@ Wire Notes Line
 Wire Notes Line
 	2450 1600 2450 7300
 NoConn ~ 6000 2800
-NoConn ~ 5700 2900
 Wire Wire Line
 	6900 1950 6900 2200
+Wire Wire Line
+	7400 3900 7300 3900
+Text HLabel 7400 3900 2    50   Input ~ 0
+input_sense
 $EndSCHEMATC

@@ -352,4 +352,161 @@ F 3 "" H 4850 4350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4600 4350 4850 4350
+$Comp
+L russian-nixies:LMC7101-AYM5-TR U6
+U 1 1 5D06EFCA
+P 3500 1300
+F 0 "U6" H 3750 1450 50  0000 R CNN
+F 1 "LMC7101-AYM5-TR" H 4350 1550 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3400 1100 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22141b.pdf" H 3500 1500 50  0001 C CNN
+	1    3500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 5D072379
+P 3400 1800
+F 0 "#PWR0132" H 3400 1550 50  0001 C CNN
+F 1 "GND" H 3405 1627 50  0000 C CNN
+F 2 "" H 3400 1800 50  0001 C CNN
+F 3 "" H 3400 1800 50  0001 C CNN
+	1    3400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5D072847
+P 3550 1650
+F 0 "C23" H 3665 1696 50  0000 L CNN
+F 1 "100n" H 3665 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3588 1500 50  0001 C CNN
+F 3 "~" H 3550 1650 50  0001 C CNN
+	1    3550 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 5D072EC9
+P 3550 900
+F 0 "C22" H 3665 946 50  0000 L CNN
+F 1 "100n" H 3665 855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3588 750 50  0001 C CNN
+F 3 "~" H 3550 900 50  0001 C CNN
+	1    3550 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 1000 3400 900 
+Connection ~ 3400 900 
+Wire Wire Line
+	3400 900  3400 700 
+Wire Wire Line
+	3400 1600 3400 1650
+Connection ~ 3400 1650
+Wire Wire Line
+	3400 1650 3400 1800
+$Comp
+L power:GND #PWR0133
+U 1 1 5D076440
+P 3800 900
+F 0 "#PWR0133" H 3800 650 50  0001 C CNN
+F 1 "GND" H 3805 727 50  0000 C CNN
+F 2 "" H 3800 900 50  0001 C CNN
+F 3 "" H 3800 900 50  0001 C CNN
+	1    3800 900 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 900  3700 900 
+Text HLabel 3750 1650 2    50   Output ~ 0
+12v
+Wire Wire Line
+	3750 1650 3700 1650
+Wire Wire Line
+	3800 1300 4050 1300
+Text HLabel 4300 1300 2    50   Output ~ 0
+input_v_sense
+Wire Wire Line
+	3150 1400 3150 2050
+Wire Wire Line
+	3150 2050 4050 2050
+Wire Wire Line
+	4050 2050 4050 1700
+Wire Wire Line
+	3150 1400 3200 1400
+$Comp
+L Device:R R21
+U 1 1 5D079D81
+P 4050 1550
+F 0 "R21" H 4120 1596 50  0000 L CNN
+F 1 "10" H 4120 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3980 1550 50  0001 C CNN
+F 3 "~" H 4050 1550 50  0001 C CNN
+	1    4050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1300 4050 1400
+Connection ~ 4050 1300
+Wire Wire Line
+	4050 1300 4300 1300
+$Comp
+L Device:R R20
+U 1 1 5D07C6AC
+P 2350 1200
+F 0 "R20" V 2143 1200 50  0000 C CNN
+F 1 "56k" V 2234 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2280 1200 50  0001 C CNN
+F 3 "~" H 2350 1200 50  0001 C CNN
+	1    2350 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 5D07CF1C
+P 2550 1350
+F 0 "C21" H 2665 1396 50  0000 L CNN
+F 1 "100n" H 2665 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2588 1200 50  0001 C CNN
+F 3 "~" H 2550 1350 50  0001 C CNN
+	1    2550 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0135
+U 1 1 5D07D74D
+P 2550 1550
+F 0 "#PWR0135" H 2550 1300 50  0001 C CNN
+F 1 "GND" H 2555 1377 50  0000 C CNN
+F 2 "" H 2550 1550 50  0001 C CNN
+F 3 "" H 2550 1550 50  0001 C CNN
+	1    2550 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1550 2550 1500
+Wire Wire Line
+	2500 1200 2550 1200
+Connection ~ 2550 1200
+Wire Wire Line
+	2550 1200 3200 1200
+Wire Wire Line
+	2000 1200 2200 1200
+Text Label 2200 2550 0    50   ~ 0
+12v
+Text Label 2000 1200 0    50   ~ 0
+12v
+Text Label 3400 700  3    50   ~ 0
+12v
+Text Notes 2000 900  0    50   ~ 0
+Low pass f3dB  = 30Hz 
+Wire Notes Line
+	1900 950  2900 950 
+Wire Notes Line
+	2900 1800 1900 1800
+Wire Notes Line
+	1900 950  1900 1800
+Wire Notes Line
+	2900 950  2900 1800
 $EndSCHEMATC

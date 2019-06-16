@@ -21,6 +21,7 @@ F0 "power&mechanical" 50
 F1 "3.3v_5v.sch" 50
 F2 "3.3v" O R 2100 2850 50 
 F3 "12v" O R 2100 2950 50 
+F4 "input_v_sense" O R 2100 2750 50 
 $EndSheet
 $Sheet
 S 6650 1700 1250 1000
@@ -114,6 +115,7 @@ F8 "PWM_heater" O R 5500 3450 50
 F9 "termocouple" I R 5500 3550 50 
 F10 "weller_con1" B R 5500 3200 50 
 F11 "12V" I L 3750 3100 50 
+F12 "input_sense" I L 3750 2750 50 
 $EndSheet
 Wire Wire Line
 	6650 3450 5500 3450
@@ -124,4 +126,6 @@ Wire Wire Line
 Connection ~ 2600 3100
 Wire Wire Line
 	2600 3100 2600 2950
+Wire Wire Line
+	3750 2750 2100 2750
 $EndSCHEMATC
