@@ -238,8 +238,6 @@ Wire Wire Line
 	4350 1850 4350 2000
 Wire Wire Line
 	4600 1850 4600 2250
-Text Notes 7800 1600 0    50   ~ 0
-można by dodać eeprom do zapisaywania danych dot temp ?\n->powinno się zmieścić we falshu\n
 Text HLabel 5850 3100 0    50   BiDi ~ 0
 sw1
 Text HLabel 5850 3200 0    50   BiDi ~ 0
@@ -518,8 +516,6 @@ Wire Wire Line
 	1800 6650 1900 6650
 Wire Wire Line
 	1900 6850 1800 6850
-Text Label 7850 3600 2    50   ~ 0
-input_divider
 Wire Wire Line
 	7400 3800 7300 3800
 Text HLabel 7400 3800 2    50   Input ~ 0
@@ -557,7 +553,7 @@ $EndComp
 Wire Wire Line
 	1800 5600 1800 5500
 Wire Wire Line
-	1800 4900 1800 4800
+	1800 4900 1800 4850
 Text HLabel 1800 4800 1    50   Input ~ 0
 3_3_stm
 Wire Wire Line
@@ -605,66 +601,6 @@ Wire Notes Line
 	700  5950 2450 5950
 Wire Notes Line
 	700  4350 2450 4350
-Text HLabel 2150 3150 2    50   Input ~ 0
-12V
-$Comp
-L Device:R R18
-U 1 1 5CF9661D
-P 1750 3350
-F 0 "R18" H 1820 3396 50  0000 L CNN
-F 1 "560k" H 1820 3305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 3350 50  0001 C CNN
-F 3 "~" H 1750 3350 50  0001 C CNN
-	1    1750 3350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R19
-U 1 1 5CF96623
-P 1750 3800
-F 0 "R19" H 1820 3846 50  0000 L CNN
-F 1 "100k" H 1820 3755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1680 3800 50  0001 C CNN
-F 3 "~" H 1750 3800 50  0001 C CNN
-	1    1750 3800
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2150 3150 1750 3150
-Wire Wire Line
-	1750 3150 1750 3200
-$Comp
-L power:GND #PWR02
-U 1 1 5CF9662B
-P 1750 4050
-F 0 "#PWR02" H 1750 3800 50  0001 C CNN
-F 1 "GND" H 1755 3877 50  0000 C CNN
-F 2 "" H 1750 4050 50  0001 C CNN
-F 3 "" H 1750 4050 50  0001 C CNN
-	1    1750 4050
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1750 3950 1750 4050
-Wire Wire Line
-	1750 3500 1750 3600
-Text Label 850  3600 0    50   ~ 0
-input_divider
-Connection ~ 1750 3600
-Wire Wire Line
-	1750 3600 1750 3650
-Wire Wire Line
-	850  3600 1750 3600
-Text Notes 1950 3150 3    50   ~ 0
- 3V  <- 20V\n
-Wire Notes Line
-	1750 3600 1900 3600
-Wire Notes Line
-	1900 3250 1850 3250
-Wire Notes Line
-	1850 3250 1850 3150
-Wire Wire Line
-	7300 3600 7850 3600
 Wire Notes Line
 	2450 3050 700  3050
 Wire Notes Line
@@ -676,8 +612,34 @@ Wire Notes Line
 NoConn ~ 6000 2800
 Wire Wire Line
 	6900 1950 6900 2200
+$Comp
+L Device:C C25
+U 1 1 5D126A2E
+P 1950 4850
+F 0 "C25" V 1698 4850 50  0000 C CNN
+F 1 "100n" V 1789 4850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1988 4700 50  0001 C CNN
+F 3 "~" H 1950 4850 50  0001 C CNN
+	1    1950 4850
+	0    1    1    0   
+$EndComp
+Connection ~ 1800 4850
 Wire Wire Line
-	7400 3900 7300 3900
-Text HLabel 7400 3900 2    50   Input ~ 0
+	1800 4850 1800 4800
+$Comp
+L power:GND #PWR0142
+U 1 1 5D12749D
+P 2100 4850
+F 0 "#PWR0142" H 2100 4600 50  0001 C CNN
+F 1 "GND" H 2105 4677 50  0000 C CNN
+F 2 "" H 2100 4850 50  0001 C CNN
+F 3 "" H 2100 4850 50  0001 C CNN
+	1    2100 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7400 3600 7300 3600
+Text HLabel 7400 3600 2    50   Input ~ 0
 input_sense
+NoConn ~ 7300 3900
 $EndSCHEMATC

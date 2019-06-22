@@ -19,97 +19,44 @@ Text HLabel 6300 2550 1    50   Input ~ 0
 Wire Wire Line
 	6300 2550 6300 2600
 Wire Wire Line
-	6300 3250 6300 3500
-$Comp
-L Driver_FET:LTC4440ES6 U2
-U 1 1 5CBAC998
-P 4700 3050
-F 0 "U2" H 4700 3631 50  0000 C CNN
-F 1 "LTC4440ES6" H 4700 3540 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4700 2650 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/4440fb.pdf" H 4600 3500 50  0001 C CNN
-	1    4700 3050
-	1    0    0    -1  
-$EndComp
-Text HLabel 4600 2200 1    50   Input ~ 0
+	6300 3250 6300 3300
+Text HLabel 4550 2150 1    50   Input ~ 0
 12V
 Wire Wire Line
-	4600 2200 4600 2400
+	4550 2150 4550 2350
 $Comp
 L power:GND #PWR?
 U 1 1 5CBAEA63
-P 4700 3850
+P 4650 3650
 AR Path="/5CB5C0EA/5CBAEA63" Ref="#PWR?"  Part="1" 
 AR Path="/5CB9B8FA/5CBAEA63" Ref="#PWR0116"  Part="1" 
-F 0 "#PWR0116" H 4700 3600 50  0001 C CNN
-F 1 "GND" H 4705 3677 50  0000 C CNN
-F 2 "" H 4700 3850 50  0001 C CNN
-F 3 "" H 4700 3850 50  0001 C CNN
-	1    4700 3850
+F 0 "#PWR0116" H 4650 3400 50  0001 C CNN
+F 1 "GND" H 4655 3477 50  0000 C CNN
+F 2 "" H 4650 3650 50  0001 C CNN
+F 3 "" H 4650 3650 50  0001 C CNN
+	1    4650 3650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 3850 4700 3350
+	4650 3650 4650 3350
 $Comp
 L Device:R R7
 U 1 1 5CBB027F
-P 4000 3050
-F 0 "R7" V 3793 3050 50  0000 C CNN
-F 1 "100" V 3884 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 3930 3050 50  0001 C CNN
-F 3 "~" H 4000 3050 50  0001 C CNN
-	1    4000 3050
+P 3800 3050
+F 0 "R7" V 3593 3050 50  0000 C CNN
+F 1 "100" V 3684 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3730 3050 50  0001 C CNN
+F 3 "~" H 3800 3050 50  0001 C CNN
+	1    3800 3050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5100 3150 5200 3150
-Wire Wire Line
-	5300 3150 5300 3500
-$Comp
-L Device:D D6
-U 1 1 5CBB1370
-P 4900 2400
-F 0 "D6" H 4900 2184 50  0000 C CNN
-F 1 "1n4148" H 4900 2275 50  0000 C CNN
-F 2 "Diode_SMD:D_0805_2012Metric" H 4900 2400 50  0001 C CNN
-F 3 "~" H 4900 2400 50  0001 C CNN
-	1    4900 2400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4750 2400 4600 2400
-Connection ~ 4600 2400
-Wire Wire Line
-	4600 2400 4600 2650
-Wire Wire Line
-	5050 2400 5100 2400
-Wire Wire Line
-	5100 2400 5100 2850
-$Comp
-L Device:C C7
-U 1 1 5CBB2260
-P 5200 3000
-F 0 "C7" H 5315 3046 50  0000 L CNN
-F 1 "100n" H 5315 2955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5238 2850 50  0001 C CNN
-F 3 "~" H 5200 3000 50  0001 C CNN
-	1    5200 3000
-	1    0    0    -1  
-$EndComp
-Connection ~ 5200 3150
-Wire Wire Line
-	5200 3150 5300 3150
-Wire Wire Line
-	5200 2850 5100 2850
-Connection ~ 5100 2850
-Text HLabel 3550 3050 0    50   Input ~ 0
+	4700 2350 4550 2350
+Connection ~ 4550 2350
+Text HLabel 3350 3050 0    50   Input ~ 0
 HeaterDrivePWM
 Wire Wire Line
-	5100 3050 6000 3050
-Wire Wire Line
-	3550 3050 3850 3050
-Wire Wire Line
-	4150 3050 4300 3050
+	3350 3050 3650 3050
 $Comp
 L Device:R R12
 U 1 1 5CBBCD40
@@ -349,35 +296,17 @@ Wire Wire Line
 	7250 5300 7050 5300
 Text HLabel 7450 3400 0    50   BiDi ~ 0
 weller_connected_pin
-Wire Wire Line
-	5300 3850 5300 3800
-$Comp
-L power:GND #PWR?
-U 1 1 5CBA9A21
-P 5300 3850
-AR Path="/5CB5C0EA/5CBA9A21" Ref="#PWR?"  Part="1" 
-AR Path="/5CB9B8FA/5CBA9A21" Ref="#PWR0122"  Part="1" 
-F 0 "#PWR0122" H 5300 3600 50  0001 C CNN
-F 1 "GND" H 5305 3677 50  0000 C CNN
-F 2 "" H 5300 3850 50  0001 C CNN
-F 3 "" H 5300 3850 50  0001 C CNN
-	1    5300 3850
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C8
 U 1 1 5CBA90B4
-P 5300 3650
-F 0 "C8" H 5415 3696 50  0000 L CNN
-F 1 "100n" H 5415 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5338 3500 50  0001 C CNN
-F 3 "~" H 5300 3650 50  0001 C CNN
-	1    5300 3650
-	1    0    0    -1  
+P 4850 2350
+F 0 "C8" H 4965 2396 50  0000 L CNN
+F 1 "10uF" H 4965 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4888 2200 50  0001 C CNN
+F 3 "~" H 4850 2350 50  0001 C CNN
+	1    4850 2350
+	0    1    -1   0   
 $EndComp
-Connection ~ 5300 3500
-Wire Wire Line
-	5300 3500 6300 3500
 $Comp
 L Device:C C19
 U 1 1 5CCE0742
@@ -451,8 +380,9 @@ F 0 "Q1" H 6406 3096 50  0000 L CNN
 F 1 "DMP2018LFK" H 6406 3005 50  0000 L CNN
 F 2 "Package_SON:Diodes_PowerDI3333-8" H 6400 2975 50  0001 L CIN
 F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 6200 3050 50  0001 L CNN
+F 4 "${KISYS3DMOD}/Package_DFN_QFN.3dshapes/DFN-8-1EP_3x3mm_P0.65mm_EP1.55x2.4mm.wrl" H 6200 3050 50  0001 C CNN "Pole4"
 	1    6200 3050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
@@ -486,7 +416,6 @@ Wire Wire Line
 	7550 3200 7600 3200
 Wire Wire Line
 	6300 3500 7200 3500
-Connection ~ 6300 3500
 Wire Wire Line
 	7600 3300 7200 3300
 Wire Wire Line
@@ -496,4 +425,106 @@ Wire Wire Line
 	7200 3500 7600 3500
 Wire Wire Line
 	5750 6000 5750 6250
+$Comp
+L Device:C C7
+U 1 1 5D187BE9
+P 4400 2350
+F 0 "C7" H 4515 2396 50  0000 L CNN
+F 1 "100n" H 4515 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4438 2200 50  0001 C CNN
+F 3 "~" H 4400 2350 50  0001 C CNN
+	1    4400 2350
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D18AED0
+P 4150 2350
+AR Path="/5CB5C0EA/5D18AED0" Ref="#PWR?"  Part="1" 
+AR Path="/5CB9B8FA/5D18AED0" Ref="#PWR0122"  Part="1" 
+F 0 "#PWR0122" H 4150 2100 50  0001 C CNN
+F 1 "GND" H 4155 2177 50  0000 C CNN
+F 2 "" H 4150 2350 50  0001 C CNN
+F 3 "" H 4150 2350 50  0001 C CNN
+	1    4150 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 2350 4250 2350
+$Comp
+L Driver_FET:LTC4440IS6 U2
+U 1 1 5D1044C6
+P 4650 3050
+F 0 "U2" H 4100 3550 50  0000 C CNN
+F 1 "LTC4440IS6" H 4250 3450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4650 2650 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/4440fb.pdf" H 4550 3500 50  0001 C CNN
+	1    4650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D6
+U 1 1 5D104CD3
+P 4950 2650
+F 0 "D6" H 4950 2434 50  0000 C CNN
+F 1 "1N4148" H 4950 2525 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric" H 4950 2475 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4950 2650 50  0001 C CNN
+	1    4950 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 3050 4250 3050
+Wire Wire Line
+	4550 2350 4550 2650
+$Comp
+L power:GND #PWR?
+U 1 1 5D10E4EA
+P 5100 2350
+AR Path="/5CB5C0EA/5D10E4EA" Ref="#PWR?"  Part="1" 
+AR Path="/5CB9B8FA/5D10E4EA" Ref="#PWR0143"  Part="1" 
+F 0 "#PWR0143" H 5100 2100 50  0001 C CNN
+F 1 "GND" H 5105 2177 50  0000 C CNN
+F 2 "" H 5100 2350 50  0001 C CNN
+F 3 "" H 5100 2350 50  0001 C CNN
+	1    5100 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 2350 5100 2350
+Wire Wire Line
+	5050 3150 5150 3150
+Wire Wire Line
+	5850 3150 5850 3300
+Wire Wire Line
+	5850 3300 6300 3300
+Connection ~ 6300 3300
+Wire Wire Line
+	6300 3300 6300 3500
+Wire Wire Line
+	5050 3050 6000 3050
+Wire Wire Line
+	4550 2650 4800 2650
+Connection ~ 4550 2650
+Wire Wire Line
+	5150 2650 5100 2650
+Wire Wire Line
+	5050 2850 5150 2850
+Wire Wire Line
+	5150 2850 5150 2650
+$Comp
+L Device:C C26
+U 1 1 5D1181DD
+P 5150 3000
+F 0 "C26" H 5265 3046 50  0000 L CNN
+F 1 "100n" H 5265 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5188 2850 50  0001 C CNN
+F 3 "~" H 5150 3000 50  0001 C CNN
+	1    5150 3000
+	1    0    0    1   
+$EndComp
+Connection ~ 5150 3150
+Wire Wire Line
+	5150 3150 5850 3150
+Connection ~ 5150 2850
 $EndSCHEMATC
