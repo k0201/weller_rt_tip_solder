@@ -151,17 +151,6 @@ Connection ~ 6600 5500
 Wire Wire Line
 	6800 5500 6800 5200
 $Comp
-L Device:R R14
-U 1 1 5CB55440
-P 4600 2400
-F 0 "R14" H 4670 2446 50  0000 L CNN
-F 1 "n.c." H 4670 2355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4530 2400 50  0001 C CNN
-F 3 "~" H 4600 2400 50  0001 C CNN
-	1    4600 2400
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R15
 U 1 1 5CB55A2D
 P 4600 2800
@@ -213,7 +202,7 @@ $EndComp
 Wire Wire Line
 	4350 2850 4350 2750
 Wire Wire Line
-	4600 2550 4600 2600
+	4600 2500 4600 2600
 Connection ~ 4600 2600
 Wire Wire Line
 	4600 2600 4600 2650
@@ -236,8 +225,6 @@ Wire Wire Line
 	4600 1850 4350 1850
 Wire Wire Line
 	4350 1850 4350 2000
-Wire Wire Line
-	4600 1850 4600 2250
 Text HLabel 5850 3100 0    50   BiDi ~ 0
 sw1
 Text HLabel 5850 3200 0    50   BiDi ~ 0
@@ -366,38 +353,38 @@ BOOT
 $Comp
 L Connector:Conn_01x04_Female J4
 U 1 1 5CEC6946
-P 1600 2300
-F 0 "J4" H 1628 2276 50  0000 L CNN
-F 1 "I2c oled " H 1628 2185 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1600 2300 50  0001 C CNN
-F 3 "~" H 1600 2300 50  0001 C CNN
-	1    1600 2300
+P 1750 3700
+F 0 "J4" H 1778 3676 50  0000 L CNN
+F 1 "I2c oled " H 1778 3585 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1750 3700 50  0001 C CNN
+F 3 "~" H 1750 3700 50  0001 C CNN
+	1    1750 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0139
 U 1 1 5CEC799A
-P 1300 2500
-F 0 "#PWR0139" H 1300 2250 50  0001 C CNN
-F 1 "GND" H 1305 2327 50  0000 C CNN
-F 2 "" H 1300 2500 50  0001 C CNN
-F 3 "" H 1300 2500 50  0001 C CNN
-	1    1300 2500
+P 1450 3900
+F 0 "#PWR0139" H 1450 3650 50  0001 C CNN
+F 1 "GND" H 1455 3727 50  0000 C CNN
+F 2 "" H 1450 3900 50  0001 C CNN
+F 3 "" H 1450 3900 50  0001 C CNN
+	1    1450 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1400 2500 1300 2500
-Text HLabel 1250 2400 0    50   Input ~ 0
+	1550 3900 1450 3900
+Text HLabel 1400 3800 0    50   Input ~ 0
 3_3_stm
 Wire Wire Line
-	1250 2400 1400 2400
+	1400 3800 1550 3800
 Wire Wire Line
-	1400 2300 1300 2300
+	1550 3700 1450 3700
 Wire Wire Line
-	1400 2200 1250 2200
-Text Label 1250 2200 0    50   ~ 0
+	1550 3600 1400 3600
+Text Label 1400 3600 0    50   ~ 0
 sda
-Text Label 1250 2300 0    50   ~ 0
+Text Label 1400 3700 0    50   ~ 0
 scl
 Text Label 5750 4200 0    50   ~ 0
 sda
@@ -457,38 +444,38 @@ Wire Wire Line
 $Comp
 L Device:R R17
 U 1 1 5CEC68D2
-P 1400 2050
-F 0 "R17" H 1470 2096 50  0000 L CNN
-F 1 "10k" H 1470 2005 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1330 2050 50  0001 C CNN
-F 3 "~" H 1400 2050 50  0001 C CNN
-	1    1400 2050
+P 1550 3450
+F 0 "R17" H 1620 3496 50  0000 L CNN
+F 1 "10k" H 1620 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1480 3450 50  0001 C CNN
+F 3 "~" H 1550 3450 50  0001 C CNN
+	1    1550 3450
 	1    0    0    -1  
 $EndComp
-Connection ~ 1400 2200
+Connection ~ 1550 3600
 $Comp
 L Device:R R16
 U 1 1 5CEC6FCF
-P 1300 2150
-F 0 "R16" H 1370 2196 50  0000 L CNN
-F 1 "10k" H 1370 2105 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1230 2150 50  0001 C CNN
-F 3 "~" H 1300 2150 50  0001 C CNN
-	1    1300 2150
+P 1450 3550
+F 0 "R16" H 1520 3596 50  0000 L CNN
+F 1 "10k" H 1520 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 3550 50  0001 C CNN
+F 3 "~" H 1450 3550 50  0001 C CNN
+	1    1450 3550
 	1    0    0    -1  
 $EndComp
-Connection ~ 1300 2300
+Connection ~ 1450 3700
 Wire Wire Line
-	1300 2300 1250 2300
-Text HLabel 1250 1900 0    50   Input ~ 0
+	1450 3700 1400 3700
+Text HLabel 1400 3300 0    50   Input ~ 0
 3_3_stm
 Wire Wire Line
-	1250 1900 1300 1900
+	1400 3300 1450 3300
 Wire Wire Line
-	1300 1900 1300 2000
+	1450 3300 1450 3400
 Wire Wire Line
-	1300 1900 1400 1900
-Connection ~ 1300 1900
+	1450 3300 1550 3300
+Connection ~ 1450 3300
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J3
 U 1 1 5CEE64F6
@@ -642,4 +629,17 @@ Wire Wire Line
 Text HLabel 7400 3600 2    50   Input ~ 0
 input_sense
 NoConn ~ 7300 3900
+Wire Wire Line
+	4600 1850 4600 2200
+$Comp
+L Device:R R14
+U 1 1 5D126D6E
+P 4600 2350
+F 0 "R14" H 4670 2396 50  0000 L CNN
+F 1 "10k" H 4670 2305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4530 2350 50  0001 C CNN
+F 3 "~" H 4600 2350 50  0001 C CNN
+	1    4600 2350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

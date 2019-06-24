@@ -366,7 +366,7 @@ Text HLabel 5750 4950 1    50   Input ~ 0
 3.3V_analog
 Wire Wire Line
 	5750 4950 5750 5000
-Text Label 7550 3200 2    50   ~ 0
+Text Label 7550 3300 2    50   ~ 0
 termocouple+
 Wire Wire Line
 	7600 3400 7450 3400
@@ -405,24 +405,13 @@ U 1 1 5CFC3271
 P 7800 3300
 F 0 "J2" H 7520 3168 50  0000 R CNN
 F 1 "AudioJack3_Ground_SwitchR" H 7520 3077 50  0000 R CNN
-F 2 "symbols:Jack Audio 1503 20" H 7800 3300 50  0001 C CNN
+F 2 "symbols:Jack Audio150320cutout" H 7800 3300 50  0001 C CNN
 F 3 "~" H 7800 3300 50  0001 C CNN
 	1    7800 3300
 	-1   0    0    -1  
 $EndComp
 Text Label 7100 3500 2    50   ~ 0
 heater
-Wire Wire Line
-	7550 3200 7600 3200
-Wire Wire Line
-	6300 3500 7200 3500
-Wire Wire Line
-	7600 3300 7200 3300
-Wire Wire Line
-	7200 3300 7200 3500
-Connection ~ 7200 3500
-Wire Wire Line
-	7200 3500 7600 3500
 Wire Wire Line
 	5750 6000 5750 6250
 $Comp
@@ -527,4 +516,23 @@ Connection ~ 5150 3150
 Wire Wire Line
 	5150 3150 5850 3150
 Connection ~ 5150 2850
+Wire Wire Line
+	6300 3500 7600 3500
+Wire Wire Line
+	7550 3300 7600 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5D11E72E
+P 7000 3200
+AR Path="/5CB5C0EA/5D11E72E" Ref="#PWR?"  Part="1" 
+AR Path="/5CB9B8FA/5D11E72E" Ref="#PWR0148"  Part="1" 
+F 0 "#PWR0148" H 7000 2950 50  0001 C CNN
+F 1 "GND" H 7005 3027 50  0000 C CNN
+F 2 "" H 7000 3200 50  0001 C CNN
+F 3 "" H 7000 3200 50  0001 C CNN
+	1    7000 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 3200 7600 3200
 $EndSCHEMATC
