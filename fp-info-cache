@@ -1,4 +1,4 @@
-14021191289174
+15583456121427
 symbols
 Crystal_SMD_3225-4Pin_3.2x2.5mm
 SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package
@@ -13,6 +13,13 @@ DDPAK-5_Q
 0
 6
 6
+symbols
+DFN_3X3_EP
+DFN 3x3 EP
+MOSFET (P-Channel)
+0
+11
+8
 symbols
 Jack Audio 1503 20
 

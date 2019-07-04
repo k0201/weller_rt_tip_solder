@@ -373,18 +373,6 @@ Wire Wire Line
 Text Notes 7100 2950 0    50   ~ 0
 from tip: ground, sensor, heater
 $Comp
-L Transistor_FET:DMP3013SFV Q1
-U 1 1 5CBB49B6
-P 6200 3050
-F 0 "Q1" H 6406 3096 50  0000 L CNN
-F 1 "DMP2018LFK" H 6406 3005 50  0000 L CNN
-F 2 "Package_SON:Diodes_PowerDI3333-8" H 6400 2975 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 6200 3050 50  0001 L CNN
-F 4 "${KISYS3DMOD}/Package_DFN_QFN.3dshapes/DFN-8-1EP_3x3mm_P0.65mm_EP1.55x2.4mm.wrl" H 6200 3050 50  0001 C CNN "Pole4"
-	1    6200 3050
-	1    0    0    1   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5CBA0B9E
 P 7800 3850
@@ -535,4 +523,15 @@ F 3 "" H 7000 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7000 3200 7600 3200
+$Comp
+L russian-nixies:AON7403 Q?
+U 1 1 5D1F5BBF
+P 6200 3050
+F 0 "Q?" H 6406 3096 50  0000 L CNN
+F 1 "AON7403" H 6406 3005 50  0000 L CNN
+F 2 "symbols:DFN_3X3_EP" H 6400 2975 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 6200 3050 50  0001 L CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
