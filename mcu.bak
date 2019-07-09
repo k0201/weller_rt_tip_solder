@@ -364,27 +364,27 @@ $EndComp
 $Comp
 L power:GND #PWR0139
 U 1 1 5CEC799A
-P 1450 3900
-F 0 "#PWR0139" H 1450 3650 50  0001 C CNN
-F 1 "GND" H 1455 3727 50  0000 C CNN
-F 2 "" H 1450 3900 50  0001 C CNN
-F 3 "" H 1450 3900 50  0001 C CNN
-	1    1450 3900
+P 1100 3900
+F 0 "#PWR0139" H 1100 3650 50  0001 C CNN
+F 1 "GND" H 1105 3727 50  0000 C CNN
+F 2 "" H 1100 3900 50  0001 C CNN
+F 3 "" H 1100 3900 50  0001 C CNN
+	1    1100 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 3900 1450 3900
-Text HLabel 1400 3800 0    50   Input ~ 0
+	1550 3900 1100 3900
+Text HLabel 1100 3800 0    50   Input ~ 0
 3_3_stm
 Wire Wire Line
-	1400 3800 1550 3800
+	1100 3800 1550 3800
 Wire Wire Line
-	1550 3700 1450 3700
+	1550 3700 1300 3700
 Wire Wire Line
-	1550 3600 1400 3600
-Text Label 1400 3600 0    50   ~ 0
+	1550 3600 1100 3600
+Text Label 1100 3600 0    50   ~ 0
 sda
-Text Label 1400 3700 0    50   ~ 0
+Text Label 1100 3700 0    50   ~ 0
 scl
 Text Label 5750 4200 0    50   ~ 0
 sda
@@ -456,26 +456,26 @@ Connection ~ 1550 3600
 $Comp
 L Device:R R16
 U 1 1 5CEC6FCF
-P 1450 3550
-F 0 "R16" H 1520 3596 50  0000 L CNN
-F 1 "10k" H 1520 3505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 3550 50  0001 C CNN
-F 3 "~" H 1450 3550 50  0001 C CNN
-	1    1450 3550
+P 1300 3550
+F 0 "R16" H 1370 3596 50  0000 L CNN
+F 1 "10k" H 1370 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1230 3550 50  0001 C CNN
+F 3 "~" H 1300 3550 50  0001 C CNN
+	1    1300 3550
 	1    0    0    -1  
 $EndComp
-Connection ~ 1450 3700
+Connection ~ 1300 3700
 Wire Wire Line
-	1450 3700 1400 3700
-Text HLabel 1400 3300 0    50   Input ~ 0
+	1300 3700 1100 3700
+Text HLabel 1150 3300 0    50   Input ~ 0
 3_3_stm
 Wire Wire Line
-	1400 3300 1450 3300
+	1150 3300 1300 3300
 Wire Wire Line
-	1450 3300 1450 3400
+	1300 3300 1300 3400
 Wire Wire Line
-	1450 3300 1550 3300
-Connection ~ 1450 3300
+	1300 3300 1550 3300
+Connection ~ 1300 3300
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J3
 U 1 1 5CEE64F6
@@ -642,4 +642,14 @@ F 3 "~" H 4600 2350 50  0001 C CNN
 	1    4600 2350
 	1    0    0    -1  
 $EndComp
+Text Notes 750  3150 0    50   ~ 0
+OLED 0,91' 4P 128x32 na I2C - SSD1306
+Text Notes 1250 2050 0    50   ~ 0
+TEMP_SENSOR ?
+Text Notes 8400 3250 0    50   ~ 0
+Wyprowadzenie pinów na test pointy ?
+Wire Notes Line
+	8500 3300 8500 3950
+Wire Notes Line
+	8500 3950 8050 3950
 $EndSCHEMATC
