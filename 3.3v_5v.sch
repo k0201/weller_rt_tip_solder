@@ -71,7 +71,7 @@ F 3 "~" H 8900 2700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8450 2550 8600 2550
-Text HLabel 10250 2550 2    50   Output ~ 6
+Text HLabel 10250 2550 2    50   Output ~ 10
 3.3v
 $Comp
 L Device:LED D2
@@ -300,7 +300,7 @@ F 3 "" H 6350 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 1150 6350 1150
-Text HLabel 7150 5550 2    50   Output ~ 6
+Text HLabel 7150 5550 2    50   Output ~ 10
 input_v_sense
 $Comp
 L Device:R R?
@@ -522,15 +522,15 @@ F 3 "~" H 3900 5650 50  0001 C CNN
 	1    3900 5650
 	1    0    0    -1  
 $EndComp
-Text Label 3650 5100 0    50   ~ 6
+Text Label 3650 5100 0    50   ~ 10
 12v
 Wire Wire Line
 	3650 5100 3900 5100
-Text HLabel 6000 6450 3    50   Output ~ 6
+Text HLabel 6000 6450 3    50   Output ~ 10
 3.3v
-Text HLabel 5650 5200 1    50   Output ~ 6
+Text HLabel 5650 5200 1    50   Output ~ 10
 3.3v
-Text Notes 4100 4950 0    50   ~ 6
+Text Notes 4100 4950 0    50   ~ 10
 20V input = 3.3 v output
 Wire Notes Line
 	4100 4950 4000 4950
@@ -737,14 +737,14 @@ Wire Wire Line
 	5700 2550 5950 2550
 Wire Wire Line
 	5950 2300 5950 2550
-Text HLabel 6100 2300 2    50   Output ~ 6
+Text HLabel 6100 2300 2    50   Output ~ 10
 12v
 Wire Wire Line
 	5950 2300 6100 2300
 Connection ~ 4650 2550
 Wire Wire Line
 	4650 2550 5000 2550
-Text Notes 3250 1950 2    50   ~ 6
+Text Notes 3250 1950 2    50   ~ 10
 dobrać
 Wire Wire Line
 	3350 2550 3300 2550
@@ -789,7 +789,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 3500 3600 3500
 Connection ~ 3300 3500
-Text Label 4300 2550 0    50   ~ 6
+Text Label 4300 2550 0    50   ~ 10
 12v
 Wire Wire Line
 	4000 3600 4100 3600
@@ -856,7 +856,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 3400 4050 3400
 NoConn ~ 4050 3400
-Text Notes 1300 1750 0    50   ~ 6
+Text Notes 1300 1750 0    50   ~ 10
 wzorowane na  PololuMini MOSFET Slide Switch with Reverse Voltage Protection, SV\n
 Wire Notes Line
 	5450 1000 5450 1800
@@ -900,6 +900,6 @@ F 1 "AON7403" H 3756 2605 50  0000 L CNN
 F 2 "symbols:DFN_3X3_EP" H 3750 2575 50  0001 L CIN
 F 3 "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf" V 3550 2650 50  0001 L CNN
 	1    3550 2650
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $EndSCHEMATC

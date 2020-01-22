@@ -19,9 +19,9 @@ Wire Wire Line
 Connection ~ 6600 1200
 Wire Wire Line
 	6600 1200 6700 1200
-Text HLabel 4500 1850 1    50   Input ~ 6
+Text HLabel 4500 1850 1    50   Input ~ 10
 3_3_stm
-Text Label 6900 1600 0    50   ~ 6
+Text Label 6900 1600 0    50   ~ 10
 3_3v_analog
 $Comp
 L Device:C C13
@@ -219,25 +219,25 @@ F 3 "" H 4600 3050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4600 3050 4600 2950
-Text HLabel 6700 1050 1    50   Input ~ 6
+Text HLabel 6700 1050 1    50   Input ~ 10
 3_3_stm
 Wire Wire Line
 	4600 1850 4350 1850
 Wire Wire Line
 	4350 1850 4350 2000
-Text HLabel 5850 3100 0    50   BiDi ~ 6
+Text HLabel 5850 3100 0    50   BiDi ~ 10
 sw1
-Text HLabel 5850 3200 0    50   BiDi ~ 6
+Text HLabel 5850 3200 0    50   BiDi ~ 10
 sw2
-Text HLabel 5750 3800 0    50   Output ~ 6
+Text HLabel 5750 3800 0    50   Output ~ 10
 led_g
-Text HLabel 5750 3900 0    50   Output ~ 6
+Text HLabel 5750 3900 0    50   Output ~ 10
 led_r
-Text HLabel 5750 4000 0    50   Output ~ 6
+Text HLabel 5750 4000 0    50   Output ~ 10
 led_y
-Text HLabel 5650 3600 0    50   BiDi ~ 6
+Text HLabel 5650 3600 0    50   BiDi ~ 10
 weller_con1
-Text HLabel 7650 4600 2    50   Output ~ 6
+Text HLabel 7650 4600 2    50   Output ~ 10
 PWM_heater
 Wire Wire Line
 	6600 1050 6900 1050
@@ -281,11 +281,11 @@ Wire Wire Line
 	7300 4800 7650 4800
 Wire Wire Line
 	7300 4900 7650 4900
-Text Label 7650 4800 0    50   ~ 6
+Text Label 7650 4800 0    50   ~ 10
 SWDIO
-Text Label 7650 4900 0    50   ~ 6
+Text Label 7650 4900 0    50   ~ 10
 SWCLK
-Text Label 5750 2400 0    50   ~ 6
+Text Label 5750 2400 0    50   ~ 10
 nRST
 Wire Wire Line
 	6000 3200 5850 3200
@@ -328,11 +328,11 @@ Wire Wire Line
 	6500 5200 6500 5500
 Wire Wire Line
 	6500 5500 6600 5500
-Text Label 1900 6850 0    50   ~ 6
+Text Label 1900 6850 0    50   ~ 10
 nRST
-Text Label 1900 6450 0    50   ~ 6
+Text Label 1900 6450 0    50   ~ 10
 SWDIO
-Text Label 1900 6550 0    50   ~ 6
+Text Label 1900 6550 0    50   ~ 10
 SWCLK
 Connection ~ 6900 1950
 $Comp
@@ -348,7 +348,7 @@ F 3 "" H 1200 6850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6700 1650 6700 2200
-Text Label 5650 2600 0    50   ~ 6
+Text Label 5650 2600 0    50   ~ 10
 BOOT
 $Comp
 L Connector:Conn_01x04_Female J4
@@ -374,7 +374,7 @@ F 3 "" H 1100 3900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1550 3900 1100 3900
-Text HLabel 1100 3800 0    50   Input ~ 6
+Text HLabel 1100 3800 0    50   Input ~ 10
 3_3_stm
 Wire Wire Line
 	1100 3800 1550 3800
@@ -382,15 +382,15 @@ Wire Wire Line
 	1550 3700 1300 3700
 Wire Wire Line
 	1550 3600 1100 3600
-Text Label 1100 3600 0    50   ~ 6
+Text Label 1100 3600 0    50   ~ 10
 sda
-Text Label 1100 3700 0    50   ~ 6
+Text Label 1100 3700 0    50   ~ 10
 scl
-Text Label 5750 4200 0    50   ~ 6
+Text Label 5750 4200 0    50   ~ 10
 sda
 Wire Wire Line
 	5750 4200 6000 4200
-Text Label 5750 4100 0    50   ~ 6
+Text Label 5750 4100 0    50   ~ 10
 scl
 Wire Wire Line
 	5750 4100 6000 4100
@@ -467,7 +467,7 @@ $EndComp
 Connection ~ 1300 3700
 Wire Wire Line
 	1300 3700 1100 3700
-Text HLabel 1150 3300 0    50   Input ~ 6
+Text HLabel 1150 3300 0    50   Input ~ 10
 3_3_stm
 Wire Wire Line
 	1150 3300 1300 3300
@@ -505,7 +505,7 @@ Wire Wire Line
 	1900 6850 1800 6850
 Wire Wire Line
 	7400 3800 7300 3800
-Text HLabel 7400 3800 2    50   Input ~ 6
+Text HLabel 7400 3800 2    50   Input ~ 10
 termocouple
 NoConn ~ 7300 3700
 NoConn ~ 7300 5000
@@ -520,11 +520,11 @@ F 3 "https://sensing.honeywell.com/honeywell-sensing-nanopower-series-product-sh
 	1    1600 5200
 	-1   0    0    -1  
 $EndComp
-Text Label 7650 3500 2    50   ~ 6
+Text Label 7650 3500 2    50   ~ 10
 hall_in
 Wire Wire Line
 	7300 3500 7650 3500
-Text Label 1150 5200 2    50   ~ 6
+Text Label 1150 5200 2    50   ~ 10
 hall_in
 $Comp
 L power:GND #PWR03
@@ -541,11 +541,11 @@ Wire Wire Line
 	1800 5600 1800 5500
 Wire Wire Line
 	1800 4900 1800 4850
-Text HLabel 1800 4800 1    50   Input ~ 6
+Text HLabel 1800 4800 1    50   Input ~ 10
 3_3_stm
 Wire Wire Line
 	1150 5200 1200 5200
-Text HLabel 1200 6450 0    50   Input ~ 6
+Text HLabel 1200 6450 0    50   Input ~ 10
 3_3_stm
 $Comp
 L MCU_ST_STM32F1:STM32F103C8Tx U4
@@ -560,21 +560,21 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 $EndComp
 Wire Wire Line
 	7300 4300 7650 4300
-Text Label 7650 4300 2    50   ~ 6
+Text Label 7650 4300 2    50   ~ 10
 usart_rx
-Text Label 7650 4400 2    50   ~ 6
+Text Label 7650 4400 2    50   ~ 10
 usart_tx
-Text Label 7650 4500 2    50   ~ 6
+Text Label 7650 4500 2    50   ~ 10
 usart_ck
 Wire Wire Line
 	7300 4500 7650 4500
 Wire Wire Line
 	7300 4400 7650 4400
-Text Label 1200 6550 2    50   ~ 6
+Text Label 1200 6550 2    50   ~ 10
 usart_rx
-Text Label 1200 6650 2    50   ~ 6
+Text Label 1200 6650 2    50   ~ 10
 usart_tx
-Text Label 1200 6750 2    50   ~ 6
+Text Label 1200 6750 2    50   ~ 10
 usart_ck
 Wire Wire Line
 	1200 6750 1300 6750
@@ -626,7 +626,7 @@ F 3 "" H 2100 4850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7400 3600 7300 3600
-Text HLabel 7400 3600 2    50   Input ~ 6
+Text HLabel 7400 3600 2    50   Input ~ 10
 input_sense
 NoConn ~ 7300 3900
 Wire Wire Line
@@ -636,17 +636,17 @@ L Device:R R14
 U 1 1 5D126D6E
 P 4600 2350
 F 0 "R14" H 4670 2396 50  0000 L CNN
-F 1 "10k" H 4670 2305 50  0000 L CNN
+F 1 "NC" H 4670 2305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4530 2350 50  0001 C CNN
 F 3 "~" H 4600 2350 50  0001 C CNN
 	1    4600 2350
 	1    0    0    -1  
 $EndComp
-Text Notes 750  3150 0    50   ~ 6
+Text Notes 750  3150 0    50   ~ 10
 OLED 0,91' 4P 128x32 na I2C - SSD1306
-Text Notes 1250 2050 0    50   ~ 6
+Text Notes 1250 2050 0    50   ~ 10
 TEMP_SENSOR ?
-Text Notes 8400 3250 0    50   ~ 6
+Text Notes 8400 3250 0    50   ~ 10
 Wyprowadzenie pinów na test pointy ?
 Wire Notes Line
 	8500 3300 8500 3950

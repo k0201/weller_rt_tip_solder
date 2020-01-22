@@ -103,15 +103,15 @@ Wire Wire Line
 	2800 2800 2800 2900
 Wire Wire Line
 	3450 2950 3450 2850
-Text HLabel 2250 2400 1    50   Input ~ 0
+Text HLabel 2250 2400 1    50   Input ~ 10
 led_red
 Wire Wire Line
 	2250 2500 2250 2400
-Text HLabel 2800 2400 1    50   Input ~ 0
+Text HLabel 2800 2400 1    50   Input ~ 10
 led_yellow
 Wire Wire Line
 	2800 2400 2800 2500
-Text HLabel 3450 2450 1    50   Input ~ 0
+Text HLabel 3450 2450 1    50   Input ~ 10
 led_green
 Wire Wire Line
 	3450 2550 3450 2450
@@ -185,11 +185,11 @@ Wire Wire Line
 	4300 3050 4300 3500
 Wire Wire Line
 	4700 3500 4700 3050
-Text HLabel 4300 1950 1    50   BiDi ~ 0
+Text HLabel 4300 1950 1    50   BiDi ~ 10
 sw1
 Wire Wire Line
 	4300 2150 4300 1950
-Text HLabel 4700 1950 1    50   BiDi ~ 0
+Text HLabel 4700 1950 1    50   BiDi ~ 10
 sw2
 Wire Wire Line
 	4700 1950 4700 2150
